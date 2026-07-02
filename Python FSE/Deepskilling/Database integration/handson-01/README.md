@@ -1,8 +1,8 @@
-SQL PROGRAM:
-```
+## SQL PROGRAM:
+
 -- HANDS-ON 1: SQL Basics
 -- hands-on 1
-
+```
 create table departments (
     department_id serial primary key,
     dept_name varchar(100) not null,
@@ -58,7 +58,7 @@ create table professors (
         foreign key (department_id)
         references departments(department_id)
 );
-
+```
 -- normalization analysis
 
 -- 1nf:
@@ -71,8 +71,15 @@ create table professors (
 -- 3nf:
 -- no transitive dependencies.
 -- department details are stored only in the departments table.
-```
-SQL OUTPUT:
+
+## SQL OUTPUT:
 <img width="1262" height="621" alt="image" src="https://github.com/user-attachments/assets/36996e96-f89c-4b3b-992e-877f2f3a10ef" />
+<img width="1263" height="652" alt="image" src="https://github.com/user-attachments/assets/54ea1a38-5073-4949-aa84-f5e8d6b04959" />
+<img width="1262" height="650" alt="image" src="https://github.com/user-attachments/assets/e080cb48-e74f-476a-ab1f-145a0bca52d2" />
+
+
+
+
+
 
 
