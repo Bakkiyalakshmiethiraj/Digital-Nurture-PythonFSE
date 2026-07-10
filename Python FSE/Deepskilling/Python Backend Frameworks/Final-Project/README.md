@@ -327,7 +327,7 @@ Through this project, I gained practical experience in:
 
 # 👩‍💻 Author
 
-**Bakkiyalakshmi**
+**Bakkiyalakshmi E**
 
 Engineering Student
 
