@@ -1,0 +1,232 @@
+/* Core Styling Tokens */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --dark-slate: #0f172a;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --border: #f1f5f9;
+}
+
+.dashboard-home {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 30px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* 🌟 Hero Banner Section */
+.hero-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 20px;
+  padding: 40px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.3);
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 350px;
+  height: 350px;
+  background: rgba(37, 99, 235, 0.2);
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.hero-content {
+  max-width: 650px;
+  z-index: 2;
+}
+
+.portal-tag {
+  background: rgba(37, 99, 235, 0.25);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin: 0 0 12px 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 📊 2. Analytical KPI Metric Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.metric-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.04);
+}
+
+.metric-info span {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-info h2 {
+  font-size: 2.25rem;
+  margin: 8px 0 0 0;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.metric-icon {
+  font-size: 1.75rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🏛️ 3. Main Dashboard Double Column Layout */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 32px;
+}
+
+@media (max-width: 992px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* ⚡ Interactive Quick Actions Quick-Links */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  width: 100%;
+}
+
+.action-btn:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.action-btn .icon {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.action-btn h4 {
+  margin: 0 0 4px 0;
+  font-size: 0.95rem;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.action-btn p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* 🔔 Notifications Stream Feed */
+.timeline-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feed-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border-left: 4px solid #cbd5e1;
+}
+
+.feed-card.urgent { border-left-color: #ef4444; }
+.feed-card.update { border-left-color: #3b82f6; }
+
+.feed-icon { font-size: 1.25rem; }
+.feed-details h5 { margin: 0 0 4px 0; font-size: 0.9rem; color: #0f172a; font-weight: 600; }
+.feed-details p { margin: 0 0 6px 0; font-size: 0.8rem; color: #475569; line-height: 1.4; }
+.feed-time { font-size: 0.75rem; color: #94a3b8; font-weight: 500; }

@@ -1,0 +1,76 @@
+<div class="register-container">
+
+  <!-- 🌟 CREATIVE ENHANCEMENT: High-Fidelity Success Notification Popup -->
+  <div *ngIf="showSuccessPopup" class="popup-modal-overlay">
+    <div class="popup-card">
+      <div class="popup-emerald-strip"></div>
+      
+      <div class="popup-icon-circle">
+        <span class="checkmark-icon">✓</span>
+      </div>
+      
+      <h3>Registration Committed</h3>
+      <p>
+        Academic access credentials for <strong>{{ registrationForm.get('name')?.value }}</strong> 
+        have been successfully mapped to the system registry ledger.
+      </p>
+      
+      <button class="btn-popup-close" (click)="dismissPopup()">
+        Acknowledge & Continue
+      </button>
+    </div>
+  </div>
+
+  <div class="register-card">
+    <div class="card-accent-strip"></div>
+    
+    <h2>Course Registration Terminal</h2>
+    <p class="form-subtitle">Provision dynamic academic access tokens to core software engineering tracks.</p>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="enterprise-form">
+
+      <!-- Legal Name Input Block -->
+      <div class="form-group" [ngClass]="{'field-error': registrationForm.get('name')?.touched && registrationForm.get('name')?.invalid}">
+        <label for="name">Legal Name</label>
+        <input id="name" type="text" placeholder="e.g., Bakkiyalakshmi E" formControlName="name">
+        <span class="validation-message" *ngIf="registrationForm.get('name')?.touched && registrationForm.get('name')?.invalid">
+          ⚠️ Identity designation string parameter is required.
+        </span>
+      </div>
+
+      <!-- Institutional Email Address Block -->
+      <div class="form-group" [ngClass]="{'field-error': registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid}">
+        <label for="email">Institutional Email Address</label>
+        <input id="email" type="email" placeholder="name@institution.com" formControlName="email">
+        <span class="validation-message" *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid">
+          ⚠️ Provide a valid, fully qualified cryptographic email path.
+        </span>
+      </div>
+
+      <!-- Target Elective Allocation Block -->
+      <div class="form-group" [ngClass]="{'field-error': registrationForm.get('course')?.touched && registrationForm.get('course')?.invalid}">
+        <label for="course">Target Elective Allocation</label>
+        <div class="select-wrapper">
+          <select id="course" formControlName="course">
+            <option value="" disabled selected>Select system elective matrix...</option>
+            <option value="HTML & CSS">HTML & CSS Architecture</option>
+            <option value="JavaScript">JavaScript Core Engines</option>
+            <option value="Angular">Angular Advanced Frameworks</option>
+            <option value="Python">Python Data Automation</option>
+          </select>
+        </div>
+        <span class="validation-message" *ngIf="registrationForm.get('course')?.touched && registrationForm.get('course')?.invalid">
+          ⚠️ System requires an active module target selection.
+        </span>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-actions">
+        <button type="submit" class="btn-submit" [disabled]="registrationForm.invalid">
+          Commit Registration
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

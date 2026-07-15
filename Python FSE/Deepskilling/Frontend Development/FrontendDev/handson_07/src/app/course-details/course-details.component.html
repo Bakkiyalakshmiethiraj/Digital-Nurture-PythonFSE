@@ -1,0 +1,26 @@
+<div *ngIf="course" class="details">
+
+  <h2>{{ course.name }}</h2>
+
+  <p><strong>Instructor:</strong> {{ course.instructor }}</p>
+
+  <p><strong>Credits:</strong> {{ course.credits }}</p>
+
+  <p>{{ course.description }}</p>
+
+  
+  <button (click)="enrolled = !enrolled">
+
+  {{ enrolled ? 'Withdraw Course' : 'Enroll Now' }}
+
+</button>
+
+<p *ngIf="enrolled" style="color: green; margin-top: 15px;">
+  ✅ Successfully Enrolled!
+</p>
+
+<p *ngIf="!enrolled" style="color: red; margin-top: 15px;">
+  You are not enrolled.
+</p>
+
+</div>
