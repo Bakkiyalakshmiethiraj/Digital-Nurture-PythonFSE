@@ -1,0 +1,156 @@
+/* ==========================================
+   ENTERPRISE STUDENT PORTFOLIO PROFILE STYLE
+   ========================================== */
+
+.profile-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 24px;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+}
+
+.profile-card {
+  background: #ffffff;
+  border: 2px solid #0f172a; /* Sharp corporate frame alignment border */
+  border-radius: 8px;
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -15px rgba(15, 23, 42, 0.08);
+}
+
+/* Identical Top Identity Accent Bar Strip from your system design */
+.card-accent-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: #0f172a;
+}
+
+/* Centered Identity Avatar Layout */
+.profile-avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.profile-avatar-badge {
+  width: 64px;
+  height: 64px;
+  background: #f8fafc;
+  border: 2px solid #0f172a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.profile-avatar-wrapper h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.profile-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 1px;
+}
+
+/* Performance Tracker Metrics Dashboard Row */
+.profile-metrics-dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .profile-metrics-dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.metric-mini-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.metric-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.metric-value {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.credit-accent { color: #2563eb; } /* Dynamic primary blue highlight */
+.cgpa-accent { color: #10b981; }   /* Emerald success highlight */
+
+/* High Information Density Matrix Block */
+.info-matrix {
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.matrix-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.matrix-row:hover {
+  background: #f8fafc;
+  border-color: #0f172a;
+}
+
+.field-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.field-value {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: right;
+}

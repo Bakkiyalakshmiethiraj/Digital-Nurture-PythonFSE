@@ -1,0 +1,49 @@
+<div class="register-card">
+
+  <h2>Student Registration</h2>
+
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+    <label>Name</label>
+    <input type="text" formControlName="name">
+
+    <small
+      *ngIf="registrationForm.get('name')?.invalid &&
+             registrationForm.get('name')?.touched">
+      Name is required
+    </small>
+
+    <label>Email</label>
+    <input type="email" formControlName="email">
+
+    <small
+      *ngIf="registrationForm.get('email')?.invalid &&
+             registrationForm.get('email')?.touched">
+      Enter a valid email
+    </small>
+
+    <label>Course</label>
+
+    <select formControlName="course">
+      <option value="">Select Course</option>
+      <option>HTML & CSS</option>
+      <option>JavaScript</option>
+      <option>Angular</option>
+      <option>Python</option>
+    </select>
+
+    <small
+      *ngIf="registrationForm.get('course')?.invalid &&
+             registrationForm.get('course')?.touched">
+      Please select a course
+    </small>
+
+    <br><br>
+
+    <button type="submit" [disabled]="registrationForm.invalid">
+      Register
+    </button>
+
+  </form>
+
+</div>

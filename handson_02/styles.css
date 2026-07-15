@@ -1,0 +1,271 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6fb;
+    color:#333;
+}
+
+/* Header */
+
+header{
+    background:#0d6efd;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+}
+
+.logo h2{
+    font-size:32px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* Hero */
+
+#hero{
+
+    min-height:40vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    background:white;
+}
+
+#hero h1{
+    font-size:clamp(2rem,3vw,3rem);
+    margin-bottom:20px;
+}
+
+#hero p{
+    max-width:700px;
+    line-height:28px;
+    margin-bottom:30px;
+}
+
+#hero button{
+
+    padding:15px 35px;
+
+    background:#0d6efd;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#hero button:hover{
+
+    background:#084298;
+
+}
+
+/* Statistics */
+
+.stats{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:35px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.stat-box{
+
+    text-align:center;
+
+}
+
+.stat-box h2{
+
+    font-size:40px;
+
+}
+
+/* Courses */
+
+#courses{
+
+    padding:60px;
+
+}
+
+#courses h2{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    font-size:35px;
+
+}
+
+.course-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.course-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.course-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.course-card h3{
+
+    color:#0d6efd;
+
+    margin-bottom:15px;
+
+}
+
+.course-card p{
+
+    line-height:25px;
+
+    margin-bottom:20px;
+
+}
+
+.course-card span{
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:5px;
+
+}
+
+/* Footer */
+
+footer{
+
+    margin-top:50px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+/* Tablet */
+
+@media (min-width:768px){
+
+.course-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* Desktop */
+
+@media (min-width:1024px){
+
+.course-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+#hero{
+
+padding:120px 20px;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:767px){
+
+header{
+
+flex-direction:column;
+
+padding:20px;
+
+}
+
+nav ul{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+}

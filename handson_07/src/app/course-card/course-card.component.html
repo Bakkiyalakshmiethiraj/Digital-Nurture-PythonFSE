@@ -1,0 +1,21 @@
+<div class="course-card">
+
+    <h3>{{ course.name }}</h3>
+
+    <p>
+        <strong>Instructor:</strong>
+        {{ course.instructor }}
+    </p>
+
+    <p>
+        <strong>Credits:</strong>
+        {{ course.credits }}
+    </p>
+
+    <p>{{ course.description }}</p>
+
+    <button [routerLink]="['/courses', course.id]">
+  View Details
+</button>
+
+</div>
